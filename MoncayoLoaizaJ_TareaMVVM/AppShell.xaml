@@ -3,15 +3,18 @@
     x:Class="MoncayoLoaizaJ_TareaMVVM.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MoncayoLoaizaJ_TareaMVVM"
+    xmlns:views="clr-namespace:MoncayoLoaizaJ_TareaMVVM.Views"
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
         <ShellContent
-            Title="Notas" />
+            Title="Notas"
+            ContentTemplate="{DataTemplate views:AllNotesPageJM}"
+            Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
 
         <ShellContent
-            Title="Acerca de" />
+            Title="Acerca de"
+            ContentTemplate="{DataTemplate views:AboutPageJM}"
+            Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
     </TabBar>
-
 </Shell>
